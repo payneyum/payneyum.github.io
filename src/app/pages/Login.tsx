@@ -76,8 +76,7 @@ export default function Login() {
 
         <div className="mt-6 p-4 bg-blue-50 rounded text-sm">
           <p className="mb-2">Demo accounts:</p>
-          <p>jimsol@gmail.com</p>
-          <p>jane@example.com</p>
+          <p>exp@gmail.com</p>
         </div>
       </div>
     </div>
