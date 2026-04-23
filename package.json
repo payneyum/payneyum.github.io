@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://payneyum.github.io/payneyumm.github.io",
+"homepage": "https://payneyum.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
