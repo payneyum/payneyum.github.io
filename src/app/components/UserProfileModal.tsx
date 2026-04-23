@@ -32,6 +32,7 @@ export default function UserProfileModal({
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl">{user.name}</DialogTitle>
+            <p className="text-gray-600 text-sm">{user.profession}</p>
           </DialogHeader>
 
           <div className="space-y-6">
