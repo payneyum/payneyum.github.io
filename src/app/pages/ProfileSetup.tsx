@@ -15,6 +15,7 @@ export default function ProfileSetup() {
   const [formData, setFormData] = useState({
     bio: "",
     education: "",
+    profession: "",
     offersSkills: "",
     wantsSkills: "",
     phone: "",
@@ -43,6 +44,7 @@ export default function ProfileSetup() {
       age: parseInt(signupData.age),
       bio: formData.bio,
       education: formData.education,
+      profession: formData.profession,
       offersSkills: formData.offersSkills.split(",").map((s) => s.trim()),
       wantsSkills: formData.wantsSkills.split(",").map((s) => s.trim()),
       phone: formData.phone,
@@ -83,6 +85,17 @@ export default function ProfileSetup() {
               value={formData.education}
               onChange={(e) => setFormData({ ...formData, education: e.target.value })}
               placeholder="e.g., BS Computer Science, University of the Philippines"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm mb-2">Profession</label>
+            <Input
+              type="text"
+              value={formData.profession}
+              onChange={(e) => setFormData({ ...formData, profession: e.target.value })}
+              placeholder="e.g., Graphic Designer, Digital Artist"
               required
             />
           </div>

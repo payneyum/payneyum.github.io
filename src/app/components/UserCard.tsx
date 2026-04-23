@@ -5,6 +5,7 @@ interface UserCardProps {
   user: {
     id: string;
     name: string;
+    profession: string; // Add this line
     offersSkills: string[];
     wantsSkills: string[];
   };
@@ -17,13 +18,15 @@ export default function UserCard({ user, onConnect }: UserCardProps) {
     <div className="border rounded-lg p-5 hover:shadow-lg transition-shadow bg-white">
       <div className="flex items-start justify-between mb-4">
         <div>
-          <h3 className="text-lg mb-1">{user.name}</h3>
-          <p className="text-gray-600 text-sm">Digital Artist</p>
+          {/* Use font-bold for the name to match your requirement */}
+          <h3 className="text-lg font-bold mb-0">{user.name}</h3>
+          {/* Replace "Digital Artist" with user.profession */}
+          <p className="text-gray-600 text-sm">{user.profession}</p>
         </div>
       </div>
 
       <div className="mb-4">
-        <p className="text-sm mb-2">Offers:</p>
+        <p className="text-sm mb-2 font-medium">Offers:</p>
         <div className="flex flex-wrap gap-2">
           {user.offersSkills.map((skill, index) => (
             <Badge key={index} variant="secondary" className="text-xs">
@@ -34,7 +37,7 @@ export default function UserCard({ user, onConnect }: UserCardProps) {
       </div>
 
       <div className="mb-4">
-        <p className="text-sm mb-2">Wants:</p>
+        <p className="text-sm mb-2 font-medium">Wants:</p>
         <div className="flex flex-wrap gap-2">
           {user.wantsSkills.map((skill, index) => (
             <Badge key={index} variant="outline" className="text-xs">
